@@ -48,6 +48,10 @@ public class AppController {
 		return "departments";
 	}
 	
+	@GetMapping("/employee/new")
+	public String addEmployee(Model model) {
+		return "add-employee";
+	}
 	
 
 }
