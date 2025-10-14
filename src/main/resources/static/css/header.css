@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === Header Principal === */
+.main-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #2e8bff, #6c63ff);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* === Logo === */
+.logo h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #00d4ff;
+}
+
+/* === Navegación === */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #00d4ff;
+}
+
+/* === Botón y menú === */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  background: #00d4ff;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #00d4ff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #2e8bff;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+
+  .nav.active ul {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

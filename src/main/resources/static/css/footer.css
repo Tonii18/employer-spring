@@ -1,0 +1,7 @@
+footer {
+  z-index: 2;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: rgb(192, 192, 192);
+}

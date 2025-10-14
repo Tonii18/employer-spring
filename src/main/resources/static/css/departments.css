@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  background-color: #f6f8fc;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Página de departamentos === */
+.departments-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* === Barra superior con título y botón === */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.top-bar h2 {
+  font-size: 1.8rem;
+  color: #2e8bff;
+}
+
+.add-btn {
+  background: #00d4ff;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #2e8bff;
+  transform: translateY(-2px);
+}
+
+/* === Grid de departamentos === */
+.department-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* === Tarjeta de departamento === */
+.department-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.department-card h3 {
+  font-size: 1.3rem;
+  color: #2e8bff;
+  margin-bottom: 0.8rem;
+}
+
+.department-card .desc {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.department-card .members {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.view-btn {
+  display: inline-block;
+  background: rgb(255, 128, 128);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  background: rgb(255, 0, 0);
+}
+
+/* === Mensaje sin departamentos === */
+.no-departments {
+  text-align: center;
+  color: #666;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #fff;
+  color: #666;
+  border-top: 1px solid #eee;
+}

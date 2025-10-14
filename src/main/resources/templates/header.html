@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employer | Cabecera</title>
+<link rel="stylesheet" href="header.css">
+</head>
+<body>
+	<header th:fragment="main-header" class="main-header">
+	<link rel="stylesheet" th:href="@{/css/header.css}">
+		<div class="logo">
+			<h1>
+				Employer<span>.</span>
+			</h1>
+		</div>
+
+		<nav class="nav" id="nav-menu">
+			<ul>
+				<li><a th:href="@{/home}">Inicio</a></li>
+				<li><a th:href="@{/employees}">Empleados</a></li>
+				<li><a th:href="@{/departments}">Departamentos</a></li>
+				<li><a href="#">Configuración</a></li>
+			</ul>
+		</nav>
+
+		<div class="actions">
+			<a href="#" class="btn">Perfil</a>
+			<button class="menu-toggle" id="menu-toggle">☰</button>
+		</div>
+	</header>
+
+	<script>
+    // Script simple para menú móvil
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

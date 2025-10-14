@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employer | Bienvenido</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="hero">
+		<div class="overlay"></div>
+		<header class="navbar">
+			<h1 class="logo">
+				Employer<span>.</span>
+			</h1>
+		</header>
+		<main class="content">
+			<h2>
+				Bienvenido a <span>Employer</span>
+			</h2>
+			<p>Tu plataforma inteligente para la gestión eficiente de
+				empleados.</p>
+			<a th:href="@{/home}" class="btn">Entrar</a>
+		</main>
+		
+		<footer th:replace="footer :: footer"></footer>
+		
+	</div>
+</body>
+</html>

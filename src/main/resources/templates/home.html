@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+ <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+	<!-- Common Header -->
+
+	<header th:replace="header :: main-header"></header>
+
+	<!-- Main content -->
+
+	<main class="dashboard">
+		<section class="welcome">
+			<h2>
+				Bienvenido, <span>Administrador</span>
+			</h2>
+			<p>Gestiona tu equipo de forma eficiente con Employer.</p>
+		</section>
+
+		<section class="cards">
+			<div class="card">
+				<h3>👥 Empleados</h3>
+				<p>Gestiona la información de tus empleados fácilmente.</p>
+				<a th:href="@{/employees}" class="card-btn">Ver empleados</a>
+			</div>
+
+			<div class="card">
+				<h3>🏢 Departamentos</h3>
+				<p>Organiza los departamentos y estructura tu empresa.</p>
+				<a th:href="@{/departments}" class="card-btn">Ver departamentos</a>
+			</div>
+		</section>
+
+		<section class="stats">
+			<h2>Resumen general</h2>
+			<div class="stats-grid">
+				<div class="stat">
+					<h4>Total empleados</h4>
+					<p>XXX</p>
+				</div>
+				<div class="stat">
+					<h4>Departamentos</h4>
+					<p>XXX</p>
+				</div>
+				<div class="stat">
+					<h4>Activos hoy</h4>
+					<p>XXX</p>
+				</div>
+				<div class="stat">
+					<h4>Nuevas altas</h4>
+					<p>XXX</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Common footer -->
+
+	<footer th:replace="footer :: footer"></footer>
+
+</body>
+</html>

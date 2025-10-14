@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employer | Departments</title>
+<link rel="stylesheet" href="css/departments.css">
+</head>
+<body>
+
+	<!-- Header -->
+
+	<header th:replace="header :: main-header"></header>
+
+	<!-- Main content -->
+
+	<main class="departments-page">
+		<div class="top-bar">
+			<h2>Departamentos</h2>
+			<a href="#" class="add-btn">+ Añadir departamento</a>
+		</div>
+
+		<section class="department-grid">
+			<div th:each="department : ${list}" class="department-card">
+				<h3 th:text="${department.name}"></h3>
+				<p th:text="${department.description}" class="desc"></p>
+				<p th:text="${department.boss}" class="members"></p>
+				<a href="#" class="view-btn">Eliminar</a>
+			</div>
+		</section>
+
+		<!-- Mensaje si no hay departamentos -->
+
+    <section th:if="${#lists.isEmpty(list)}" class="no-departments">
+      <p>No hay departamentos registrados todavía.</p>
+    </section>
+ 
+	</main>
+
+	<!-- Footer -->
+
+	<footer th:replace="footer :: footer"></footer>
+
+</body>
+</html>
