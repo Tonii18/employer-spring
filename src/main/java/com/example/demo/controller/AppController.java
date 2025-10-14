@@ -48,9 +48,9 @@ public class AppController {
 		return "departments";
 	}
 	
-	@GetMapping("/employee/new")
+	@GetMapping("/employees/new")
 	public String addEmployee(Model model) {
-		return "add-employee";
+		return "employee-form";
 	}
 	
 

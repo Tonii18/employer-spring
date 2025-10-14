@@ -28,12 +28,12 @@
 			</div>
 		</section>
 
-		<!-- Mensaje si no hay departamentos -->
+		<!-- Empty list message -->
 
-    <section th:if="${#lists.isEmpty(list)}" class="no-departments">
-      <p>No hay departamentos registrados todavía.</p>
-    </section>
- 
+		<section th:if="${#lists.isEmpty(list)}" class="no-departments">
+			<p>No hay departamentos registrados todavía.</p>
+		</section>
+
 	</main>
 
 	<!-- Footer -->
