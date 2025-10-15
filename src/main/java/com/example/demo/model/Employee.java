@@ -1,12 +1,22 @@
 package com.example.demo.model;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Positive;
+
 public class Employee {
 	
 	private int id;
+	@NotEmpty(message = "El nombre no puede estar vacio")
 	private String fullName;
+	@Positive(message = "La edad debe ser mayor que 0")
 	private int age;
+	@Email(message = "El email debe contener @")
+	@NotEmpty(message = "El email no puede estar vacio")
 	private String email;
+	@NotEmpty(message = "El departamento no puede estar vacio")
 	private String department;
+	@Positive(message = "El salario debe ser mayor que 0")
 	private double salary;
 	
 	public Employee() {
