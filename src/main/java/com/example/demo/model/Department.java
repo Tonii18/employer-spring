@@ -1,10 +1,15 @@
 package com.example.demo.model;
 
+import jakarta.validation.constraints.NotEmpty;
+
 public class Department {
 	
 	private int id;
+	@NotEmpty(message = "El nombre no puede ser nulo")
 	private String name;
+	@NotEmpty(message = "La descripcion no puede ser nula")
 	private String description;
+	@NotEmpty(message = "El nombre de jefe no puede ser nulo")
 	private String boss;
 	
 	public Department() {

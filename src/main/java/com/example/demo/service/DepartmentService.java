@@ -14,8 +14,7 @@ public class DepartmentService {
 	private int cont = 0;
 	
 	public DepartmentService() {
-		list.add(new Department(1, "Sales","Ventas", "Juan Pérez Matos"));
-		list.add(new Department(2, "Software Development","Desarrollo web, backend y frontend", "Antonio Jesús Sánchez Rosales"));
+		
 	}
 	
 	public List<Department> getDepartments(){
@@ -23,6 +22,8 @@ public class DepartmentService {
 	}
 	
 	public void addDepartment(Department dep) {
+		cont++;
+		dep.setId(cont);
 		list.add(dep);
 	}
 	

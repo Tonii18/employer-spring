@@ -14,8 +14,7 @@ public class EmployeeService {
 	private int cont = 0;
 	
 	public EmployeeService() {
-		list.add(new Employee(1, "Antonio Jesús Sánchez Rosales", 21, "ajsanrosal@gmail.com", "Software development", 5500D));
-		list.add(new Employee(2, "Ana Gutiérrez Pérez", 20, "anagp20@gmail.com", "Sales", 2350D));
+		
 	}
 	
 	public List<Employee> getEmployees(){
@@ -23,6 +22,8 @@ public class EmployeeService {
 	}
 	
 	public void addEmployee(Employee emp) {
+		cont++;
+		emp.setId(cont);
 		list.add(emp);
 	}
 	
