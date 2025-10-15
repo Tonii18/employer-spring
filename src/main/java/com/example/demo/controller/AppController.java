@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.model.Department;
@@ -94,7 +95,20 @@ public class AppController {
 		depService.addDepartment(department);
 		
 		return "redirect:/departments";
+	}
+	
+	@GetMapping("/employees/delete/{id}")
+	public String deleteEmployee(@PathVariable int id) {
+		empService.deleteEmployee(id);
 		
+		return "redirect:/employees";
+	}
+	
+	@GetMapping("/departments/delete/{id}")
+	public String deleteDepartment(@PathVariable int id) {
+		depService.deleteDepartment(id);
+		
+		return "redirect:/departments";
 	}
 
 }

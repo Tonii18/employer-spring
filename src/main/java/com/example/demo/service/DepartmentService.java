@@ -27,8 +27,8 @@ public class DepartmentService {
 		list.add(dep);
 	}
 	
-	public void deleteDepartment(Department dep) {
-		list.remove(dep);
+	public void deleteDepartment(int id) {
+		list.removeIf(d -> d.getId() == id);
 	}
 
 }

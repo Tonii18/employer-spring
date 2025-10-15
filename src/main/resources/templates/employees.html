@@ -27,7 +27,7 @@
 				<h3 th:text="${employee.fullName}"></h3>
 				<p th:text="${employee.department}" class="position"></p>
 				<p th:text="${employee.email}" class="email"></p>
-				<a href="#" class="view-btn">Eliminar</a>
+				<a th:href="@{employees/delete/{id}(id=${employee.id})}" class="view-btn">Eliminar</a>
 			</div>
 
 		</section>

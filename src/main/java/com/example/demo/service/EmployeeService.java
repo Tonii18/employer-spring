@@ -27,8 +27,8 @@ public class EmployeeService {
 		list.add(emp);
 	}
 	
-	public void deleteEmployee(Employee emp) {
-		list.remove(emp);
+	public void deleteEmployee(int id) {
+		list.removeIf(e -> e.getId() == id);
 	}
 
 }
