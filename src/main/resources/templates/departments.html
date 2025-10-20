@@ -24,9 +24,7 @@
 				<h3 th:text="${department.name}"></h3>
 				<p th:text="${department.description}" class="desc"></p>
 				<p th:text="${department.boss}" class="members"></p>
-				<a th:href="@{departments/delete/{id}(id=$
-				
-				{department.id})}" class="view-btn">Eliminar</a>
+				<a th:href="@{departments/delete/{id}(id=${department.id})}" class="view-btn">Eliminar</a>
 			</div>
 		</section>
 
