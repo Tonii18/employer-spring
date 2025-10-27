@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,21 +14,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.model.Department;
 import com.example.demo.model.Employee;
-import com.example.demo.service.DepartmentService;
-import com.example.demo.service.EmployeeService;
+import com.example.demo.service.DepartmentServices;
+import com.example.demo.service.EmployeeServices;
 
 import jakarta.validation.Valid;
 
 @Controller
 public class AppController {
 	
-	private EmployeeService empService;
-	private DepartmentService depService;
+	@Autowired
+	@Qualifier("employeeService")
+	private EmployeeServices empServ;
 	
-	public AppController(EmployeeService empService, DepartmentService depService) {
-		this.empService = empService;
-		this.depService = depService;
-	}
+	@Autowired
+	@Qualifier("departmentService")
+	private DepartmentServices deptServ;
+	
+	//
 	
 	@GetMapping("/")
 	public String init() {
@@ -40,7 +44,7 @@ public class AppController {
 	
 	@GetMapping("/employees")
 	public String employees(Model model) {
-		List<Employee> list = empService.getEmployees();
+		List<Employee> list = empServ.listEmployees();
 		model.addAttribute("list", list);
 		
 		return "employees";
@@ -48,7 +52,7 @@ public class AppController {
 	
 	@GetMapping("/departments")
 	public String departments(Model model) {
-		List<Department> list = depService.getDepartments();
+		List<Department> list = deptServ.listAllDepartments();
 		model.addAttribute("list", list);
 		
 		return "departments";
@@ -69,7 +73,7 @@ public class AppController {
 			return "employee-form";
 		}
 		
-		empService.addEmployee(employee);
+		empServ.addEmployee(employee);
 		
 		return "redirect:/employees";
 	}
@@ -92,21 +96,21 @@ public class AppController {
 			return "department-form";
 		}
 		
-		depService.addDepartment(department);
+		deptServ.addDept(department);
 		
 		return "redirect:/departments";
 	}
 	
 	@GetMapping("/employees/delete/{id}")
 	public String deleteEmployee(@PathVariable int id) {
-		empService.deleteEmployee(id);
+		empServ.removeEmployee(id);
 		
 		return "redirect:/employees";
 	}
 	
 	@GetMapping("/departments/delete/{id}")
 	public String deleteDepartment(@PathVariable int id) {
-		depService.deleteDepartment(id);
+		deptServ.removeDept(id);
 		
 		return "redirect:/departments";
 	}
