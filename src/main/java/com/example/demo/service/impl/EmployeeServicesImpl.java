@@ -49,4 +49,9 @@ public class EmployeeServicesImpl implements EmployeeServices{
 		return empRepo.save(emp);
 	}
 
+	@Override
+	public long getCount() {
+		return empRepo.count();
+	}
+
 }

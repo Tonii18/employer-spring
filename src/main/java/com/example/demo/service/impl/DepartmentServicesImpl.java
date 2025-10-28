@@ -49,4 +49,9 @@ public class DepartmentServicesImpl implements DepartmentServices{
 		return deptRepo.save(dept);
 	}
 
+	@Override
+	public long getCount() {
+		return deptRepo.count();
+	}
+
 }

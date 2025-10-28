@@ -38,7 +38,13 @@ public class AppController {
 	}
 	
 	@GetMapping("/home")
-	public String home() {
+	public String home(Model model) {
+		long totalEmployees = empServ.getCount();
+		long totalDepts = deptServ.getCount();
+		
+		model.addAttribute("totalEmployees", totalEmployees);
+		model.addAttribute("totalDepartments", totalDepts);
+		
 		return "home";
 	}
 	
