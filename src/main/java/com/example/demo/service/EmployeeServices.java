@@ -11,5 +11,6 @@ public interface EmployeeServices {
 	int removeEmployee(int id);
 	Employee updateEmployee(Employee emp);
 	long getCount();
+	Employee getEmployee(int id);
 	
 }

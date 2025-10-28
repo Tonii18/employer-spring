@@ -120,5 +120,21 @@ public class AppController {
 		
 		return "redirect:/departments";
 	}
+	
+	// Updating employees and departments
+	
+	@GetMapping("/employees/update/{id}")
+	public String showUpdateForm(@PathVariable int id, Model model) {
+		model.addAttribute("employee", empServ.getEmployee(id));
+		
+		return "employee-form";
+	}
+	
+	@GetMapping("/departments/update/{id}")
+	public String showUpdateFormDept(@PathVariable int id, Model model) {
+		model.addAttribute("department", deptServ.getDepartment(id));
+		
+		return "department-form";
+	}
 
 }

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Employer | Empleados</title>
-<link rel="stylesheet" href="header.css">
-<link rel="stylesheet" href="css/employees.css">
+<link rel="stylesheet" th:href="@{/css/header.css}">
+<link rel="stylesheet" th:href="@{/css/employees.css}">
 </head>
 <body>
 
@@ -28,6 +28,7 @@
 				<p th:text="${employee.department}" class="position"></p>
 				<p th:text="${employee.email}" class="email"></p>
 				<a th:href="@{employees/delete/{id}(id=${employee.id})}" class="view-btn">Eliminar</a>
+				<a th:href="@{employees/update/{id}(id=${employee.id})}" class="update-btn"> Editar </a>
 			</div>
 
 		</section>

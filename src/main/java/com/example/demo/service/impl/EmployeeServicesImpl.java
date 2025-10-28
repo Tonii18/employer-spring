@@ -54,4 +54,9 @@ public class EmployeeServicesImpl implements EmployeeServices{
 		return empRepo.count();
 	}
 
+	@Override
+	public Employee getEmployee(int id) {
+		return empRepo.findById(id).get();
+	}
+
 }

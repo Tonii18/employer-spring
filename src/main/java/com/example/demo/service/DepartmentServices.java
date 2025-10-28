@@ -11,5 +11,6 @@ public interface DepartmentServices {
 	int removeDept(int id);
 	Department updateDept(Department dept);
 	long getCount();
+	Department getDepartment(int id);
 
 }

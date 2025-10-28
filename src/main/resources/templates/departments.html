@@ -25,6 +25,7 @@
 				<p th:text="${department.description}" class="desc"></p>
 				<p th:text="${department.boss}" class="members"></p>
 				<a th:href="@{departments/delete/{id}(id=${department.id})}" class="view-btn">Eliminar</a>
+				<a th:href="@{departments/update/{id}(id=${department.id})}" class="update-btn">Editar</a>
 			</div>
 		</section>
 

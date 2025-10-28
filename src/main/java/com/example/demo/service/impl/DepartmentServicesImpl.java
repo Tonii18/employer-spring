@@ -54,4 +54,9 @@ public class DepartmentServicesImpl implements DepartmentServices{
 		return deptRepo.count();
 	}
 
+	@Override
+	public Department getDepartment(int id) {
+		return deptRepo.findById(id).get();
+	}
+
 }

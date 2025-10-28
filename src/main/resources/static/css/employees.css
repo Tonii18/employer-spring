@@ -107,6 +107,22 @@ body {
   background: rgb(255, 0, 0);
 }
 
+.update-btn {
+  display: inline-block;
+  background: rgb(52, 247, 169);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.update-btn:hover {
+  background: rgb(40, 191, 131);
+}
+
 /* === Mensaje sin empleados === */
 .no-employees {
   text-align: center;

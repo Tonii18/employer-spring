@@ -21,6 +21,8 @@
 				empresa.</p>
 
 			<form th:action="@{/departments/add}" th:object="${department}" method="POST" class="department-form">
+			<input type="hidden" th:field="*{id}" />
+				
 				<div class="form-group">
 					<label for="name">Nombre del departamento</label> <input
 						type="text" th:field="*{name}" id="name" name="name"
